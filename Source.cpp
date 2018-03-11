@@ -12,5 +12,8 @@ int main()
 	insertPoz(cap, 555, 5);
 	afisareDusInt(cap);
 
+	stergere(cap, 5);
+	afisareDusInt(cap);
+
 	return 0;
 }

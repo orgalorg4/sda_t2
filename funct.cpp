@@ -77,3 +77,31 @@ void insertPoz(Element * cap, int val, int poz)
 		}
 	}
 }
+
+void stergere(Element *& cap, int val)
+{
+	if (!cap) return;
+	Element *q = cap;
+	if (cap->data == val)
+	{
+		cap = cap->succ;
+		if(cap)
+			cap->pred = 0;
+		delete q;
+	}
+	else
+	{
+		while (q->succ)
+		{
+			q = q->succ;
+			if (q->data == val)
+			{
+				q->pred->succ = q->succ;
+				if (q->succ)
+					q->succ->pred = q->pred;
+				delete q;
+				break;
+			}
+		}
+	}
+}

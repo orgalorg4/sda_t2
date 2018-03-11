@@ -9,3 +9,4 @@ struct Element
 void insertFront(Element *&cap, int val);
 void afisareDusInt(Element *cap);
 void insertPoz(Element *cap, int val, int poz);
+void stergere(Element *&cap, int val);
